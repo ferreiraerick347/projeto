@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      html,
+      body,
+      div {
+        height: 100vh;
+        width: 100vw;
+      }
+
+      div {
+        background-color: bisque;
+        color: black;
+        padding: 1rem;
+
+        transition: 0.5s;
+      }
+
+      .dark-mode {
+        background-color: rgb(12, 12, 36);
+        color: bisque;
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <p>
+        Mussum Ipsum, cacilds vidis litro abertis. Sapien in monti palavris qui
+        num significa nadis i pareci latim. Si u mundo tá muito paradis? Toma um
+        mé que o mundo vai girarzis! Todo mundo vê os porris que eu tomo, mas
+        ninguém vê os tombis que eu levo! Casamentiss faiz malandris se
+        pirulitá. Mais vale um bebadis conhecidiss, que um alcoolatra anonimis.
+        In elementis mé pra quem é amistosis quis leo. Paisis, filhis, espiritis
+        santis. Per aumento de cachacis, eu reclamis. Praesent malesuada urna
+        nisi, quis volutpat erat hendrerit non. Nam vulputate dapibus. Si u
+        mundo tá muito paradis? Toma um mé que o mundo vai girarzis! Interagi no
+        mé, cursus quis, vehicula ac nisi. Si num tem leite então bota uma pinga
+        aí cumpadi! Todo mundo vê os porris que eu tomo, mas ninguém vê os
+        tombis que eu levo! Praesent vel viverra nisi. Mauris aliquet nunc non
+        turpis scelerisque, eget. Praesent malesuada urna nisi, quis volutpat
+        erat hendrerit non. Nam vulputate dapibus. Diuretics paradis num copo é
+        motivis de denguis.
+      </p>
+      <button type="button">Modo Escuro</button>
+    </div>
+
+    <script>
+      const div = document.querySelector("div")
+      const button = document.querySelector("button")
+
+      let isDark = false
+      let darkModeButtonText = "Modo Claro"
+      let lightModeButtonText = "Modo Escuro"
+      const darkModeClassName = "dark-mode"
+
+      button.onclick = () => {
+        if (!isDark) {
+          div.classList.add(darkModeClassName)
+          button.innerHTML = darkModeButtonText
+          isDark = true
+        } else {
+          div.classList.remove(darkModeClassName)
+          button.innerHTML = lightModeButtonText
+          isDark = false
+        }
+      }
+    </script>
+  </body>
+</html>
